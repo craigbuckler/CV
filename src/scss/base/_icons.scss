@@ -1,0 +1,23 @@
+// inlined SVG icons
+@mixin icon($name) {
+  .#{$name}:before {
+    background: inline('#{$name}.svg') no-repeat 50% 50%;
+  }
+}
+
+.icon:before, nav svg {
+  display: inline-block;
+  content: ' ';
+  width: 1.4em;
+  height: 1.4em;
+  margin-right: 0.3em;
+  vertical-align: middle;
+}
+
+@include icon('web');
+@include icon('phone');
+@include icon('skype');
+@include icon('email');
+@include icon('github');
+@include icon('twitter');
+@include icon('linkedin');

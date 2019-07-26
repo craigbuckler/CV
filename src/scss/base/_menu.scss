@@ -1,0 +1,69 @@
+// menu
+
+$menu-height: 2.6em;
+
+input {
+  position: fixed;
+  left: -5em;
+}
+
+label {
+  user-select: none;
+  cursor: pointer;
+}
+
+nav {
+
+  position: fixed;
+  top: calc(100% -#{$menu-height});
+  right: 2vw;
+
+  ul, li, label, a {
+    @include reset-list;
+  }
+
+  ul {
+    border-bottom: 0 none;
+    border-radius: 3px 3px 0 0;
+    opacity: 0.85;
+    backdrop-filter: blur(2px);
+    transform: translateY(0%);
+  }
+
+  a:link, a:visited, label {
+    display: block;
+    height: $menu-height;
+    line-height: $menu-height;
+    font-weight: 400;
+    padding: 0 1em;
+    text-decoration: none;
+  }
+
+  a {
+    text-transform: uppercase;
+  }
+
+}
+
+label[for="menu"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+label[for="dark"] {
+  display: none;
+}
+
+@supports (color: var(--color-fore)) {
+
+  label[for="dark"] {
+    display: block;
+  }
+
+}
+
+#menu:checked ~ nav ul {
+  transform: translateY(-100%);
+}

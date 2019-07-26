@@ -1,0 +1,14 @@
+// Global Sass variables
+
+// fonts
+$font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+$font-mono: Consolas, Menlo, "DejaVu Mono", monospace;
+$font-size-old: 100%;
+$font-size-rwd: calc(0.8em + 0.5vw);
+
+// responsive breakpoints
+$breakpoint: (
+	'small'		: 30rem,
+	'medium'	: 56rem,
+	'large'		: 70rem
+);

@@ -1,0 +1,49 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "description": "Craig Buckler Curriculum Vitae / Résumé",
+  "cv": {
+    "language": "en-GB",
+    "theme": "#f73"
+  },
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "homepage": "https://github.com/craigbuckler/CV#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/craigbuckler/CV.git"
+  },
+  "bugs": {
+    "url": "https://github.com/craigbuckler/CV/issues"
+  },
+  "keywords": [
+    "CV",
+    "resume"
+  ],
+  "author": "Craig Buckler",
+  "license": "MIT",
+  "browserslist": [
+    "ie 11",
+    "> 2%"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "9.6.1",
+    "browser-sync": "2.26.7",
+    "css-mqpacker": "7.0.0",
+    "cssnano": "4.1.10",
+    "del": "5.0.0",
+    "gulp": "4.0.2",
+    "gulp-htmlclean": "2.7.22",
+    "gulp-htmllint": "0.0.16",
+    "gulp-imagemin": "6.0.0",
+    "gulp-newer": "1.4.0",
+    "gulp-noop": "1.0.0",
+    "gulp-postcss": "8.0.0",
+    "gulp-preprocess": "3.0.2",
+    "gulp-sass": "4.0.2",
+    "postcss-assets": "5.0.0"
+  }
+}

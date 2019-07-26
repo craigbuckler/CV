@@ -1,0 +1,59 @@
+// print styling
+
+@media print {
+
+  @page {
+    margin: 0;
+  }
+
+  body {
+    font-size: 12px;
+  }
+
+  nav, input {
+    display: none;
+  }
+
+  #full:not(:checked) ~ #page::after {
+    content: "full information is available at craigbuckler.com";
+    clear: both;
+    display: block;
+    font-size: 1.5em;
+    font-style: italic;
+    text-align: center;
+    padding-top: 2em;
+  }
+
+  body, #page, h1, h2, a:link, a:visited {
+    color: #000;
+    border-color: #555;
+    text-decoration: none;
+  }
+
+  header, main {
+    display: block;
+    max-width: none;
+  }
+
+  article {
+    float: left;
+    width: 50%;
+    padding: 2em 0 0 1em;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  article:nth-child(odd) {
+    clear: both;
+    padding: 2em 1em 0 0;
+  }
+
+  li {
+    margin-top: 0.5em;
+  }
+
+  .fromto, li .full {
+    color: #555;
+  }
+
+}

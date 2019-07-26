@@ -1,0 +1,27 @@
+// compact/full toggle
+
+.full {
+  display: none;
+}
+
+#full:checked ~ #page, #full:checked ~ nav {
+
+  .full {
+    display: block;
+  }
+
+  li.full {
+    display: list-item;
+  }
+
+}
+
+label[for="full"] {
+  .on  { display: none; }
+  .off { display: inline-block; }
+}
+
+#full:checked ~ nav label[for="full"] {
+  .on  { display: inline-block; }
+  .off { display: none; }
+}

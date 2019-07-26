@@ -1,0 +1,185 @@
+// theming
+
+// Sass colours
+$hue-main: 180;
+$hue-hint: 20;
+$hue-link: 210;
+
+$color-fore: hsl($hue-main, 90, 10);
+$color-fmin: hsl($hue-main, 10, 60);
+$color-back: hsl($hue-main, 5, 95);
+
+$color-hint: hsl($hue-hint, 100, 50);
+$color-hhov: hsl($hue-hint, 100, 40);
+
+$color-link: hsl($hue-link, 100, 50);
+$color-lvis: hsl($hue-link, 30, 50);
+$color-lhov: hsl($hue-link, 100, 30);
+
+#page, nav {
+
+  --hue-main: #{$hue-main};
+  --hue-hint: #{$hue-hint};
+  --hue-link: #{$hue-link};
+
+  --color-fore: hsl(var(--hue-main), 90%, 10%);
+  --color-fmin: hsl(var(--hue-main), 10%, 60%);
+  --color-back: hsl(var(--hue-main), 5%, 95%);
+
+  --color-hint: hsl(var(--hue-hint), 100%, 50%);
+  --color-hhov: hsl(var(--hue-hint), 100%, 40%);
+
+  --color-link: hsl(var(--hue-link), 100%, 50%);
+  --color-lvis: hsl(var(--hue-link), 30%, 50%);
+  --color-lhov: hsl(var(--hue-link), 100%, 30%);
+
+}
+
+#dark:checked ~ #page, #dark:checked ~ nav {
+
+  --color-fore: hsl(var(--hue-main), 5%, 95%);
+  --color-fmin: hsl(var(--hue-main), 5%, 60%);
+  --color-back: hsl(var(--hue-main), 90%, 10%);
+
+  --color-hint: hsl(var(--hue-hint), 100%, 60%);
+  --color-hhov: hsl(var(--hue-hint), 100%, 70%);
+
+  --color-lvis: hsl(var(--hue-link), 30%, 50%);
+  --color-lhov: hsl(var(--hue-link), 100%, 70%);
+
+}
+
+#page, nav ul {
+  color: $color-fore;
+  color: var(--color-fore);
+  background-color: $color-back;
+  background-color: var(--color-back);
+  transition: color 0.3s linear, background-color 0.3s linear, transform 0.3s ease-in-out;
+}
+
+nav {
+
+  ul {
+    border: 1px solid $color-hint;
+    border-color: var(--color-hint);
+  }
+
+  svg {
+    fill: $color-fore;
+    fill: var(--color-fore);
+    transform: rotate(0deg);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  a:link, a:visited, label {
+    color: $color-fore;
+    color: var(--color-fore);
+  }
+
+  a:hover, a:focus, a:active, label:hover, label:focus, label[for="menu"] {
+    color: $color-back;
+    color: var(--color-back);
+    background-color: $color-hint;
+    background-color: var(--color-hint);
+
+    svg {
+      fill: $color-back;
+      fill: var(--color-back);
+    }
+  }
+
+  a:hover, a:focus, a:active {
+    svg {
+      transform: rotate(-90deg);
+    }
+  }
+
+}
+
+label[for="dark"] {
+  .on  { display: none; }
+  .off { display: inline-block; }
+}
+
+#dark:checked ~ nav label[for="dark"] {
+  .on  { display: inline-block; }
+  .off { display: none; }
+}
+
+h1, h2 {
+  border-left: 0.3em solid $color-hint;
+  border-top: 1px solid $color-hint;
+  border-color: var(--color-hint)
+}
+
+a:link {
+  text-decoration: underline solid;
+  color: $color-link;
+  color: var(--color-link);
+}
+
+a:visited {
+  color: $color-lvis;
+  color: var(--color-lvis);
+}
+
+a:hover, a:focus, a:active {
+  color: $color-lhov;
+  color: var(--color-lhov);
+}
+
+.fromto, li .full {
+  color: $color-fmin;
+  color: var(--color-fmin);
+}
+
+:target {
+
+  animation: articleflash 0.2s linear 1s 1 forwards;
+
+  h1, h2 {
+    color: $color-back;
+    color: var(--color-back);
+    background-color: $color-hhov;
+    background-color: var(--color-hhov);
+  }
+
+}
+
+@keyframes articleflash {
+  0% {
+    background-color: $color-hint;
+    background-color: var(--color-hint);
+  }
+  100% {
+    background-color: $color-back;
+    background-color: var(--color-back);
+  }
+}
+
+// disable animations for reduced motion
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  #page, nav ul {
+    transition: none;
+  }
+
+  nav {
+
+    a:hover, a:focus, a:active {
+      svg {
+        transform: none;
+      }
+    }
+
+  }
+
+  :target {
+    animation: none;
+  }
+
+}
