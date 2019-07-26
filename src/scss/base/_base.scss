@@ -1,4 +1,8 @@
 // Base styles
+#preview {
+  display: none;
+}
+
 :root {
   font-size: $font-size-rwd;
 }

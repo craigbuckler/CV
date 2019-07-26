@@ -1,6 +1,6 @@
 # Single-file HTML5 Curriculum Vitae / Résumé
 
-Gulp build process to create a single HTML5 CV for distribution.
+Gulp build process to create a single HTML5 CV for distribution and hosting at [craigbuckler.com](https://craigbuckler.com/).
 
 Development mode:
 

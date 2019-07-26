@@ -139,6 +139,7 @@
       htmllint: {
         'failOnError': false,
         'rules': {
+          'attr-bans': [],
           'attr-name-ignore-regex': '[viewBox|xlink:href]',
           'indent-width': false,
           'tag-bans': false,
