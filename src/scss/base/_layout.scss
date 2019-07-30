@@ -2,14 +2,17 @@
 
 #page {
   position: relative;
-  padding: 0 4vw;
-  margin: 0;
+  @include reset;
 }
 
-header, main {
+main, .content {
   max-width: 60em;
-  padding: 0;
+  padding: 0 4vw;
   margin: 0 auto;
+}
+
+.content {
+  padding: 1vw 4vw;
 }
 
 article {
@@ -22,10 +25,15 @@ article {
     display: grid;
     grid-gap: 0;
     grid-template-columns: repeat(auto-fit, minmax(calc(1% + 20rem), 1fr));
+    padding: 0;
   }
 
   article {
-    padding: 2vmax 3vw;
+    padding: 2vmax 3vw 5vmax 3vw;
+  }
+
+  .content {
+    padding: 0;
   }
 
 }

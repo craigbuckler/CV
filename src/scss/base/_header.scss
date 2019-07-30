@@ -1,0 +1,26 @@
+// header
+
+header {
+
+  margin-bottom: 1em;
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  svg, p {
+    display: block;
+    flex: 1 1 50%;
+    padding: 1vmax 3vw;
+    margin: 0;
+  }
+
+  p {
+    font-size: calc(1em + 1.5vw);
+    line-height: 1;
+    text-align: right;
+  }
+
+}

@@ -4,7 +4,7 @@
   "description": "Craig Buckler Curriculum Vitae / Résumé",
   "cv": {
     "language": "en-GB",
-    "theme": "#f73"
+    "theme": "#05f"
   },
   "main": "gulpfile.js",
   "scripts": {

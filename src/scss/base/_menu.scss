@@ -43,6 +43,10 @@ nav {
     text-transform: uppercase;
   }
 
+  a[href="#"] {
+    text-transform: none;
+  }
+
 }
 
 label[for="menu"] {

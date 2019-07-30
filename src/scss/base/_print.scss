@@ -3,7 +3,7 @@
 @media print {
 
   @page {
-    margin: 0;
+    margin: 1cm 1.4cm;
   }
 
   body {
@@ -24,18 +24,31 @@
     padding-top: 2em;
   }
 
-  body, #page, h1, h2, a:link, a:visited {
+  body, #page, header, header p, h1, h2, a:link, a:visited {
     color: #000;
     border-color: #555;
+    background-color: #fff;
     text-decoration: none;
   }
 
-  header, main {
+  header {
+
+    .box {
+      stroke: #000;
+    }
+
+    .text {
+      fill: #000;
+    }
+
+  }
+
+  main, .content {
     display: block;
     max-width: none;
   }
 
-  article {
+  article, header .content * {
     float: left;
     width: 50%;
     padding: 2em 0 0 1em;

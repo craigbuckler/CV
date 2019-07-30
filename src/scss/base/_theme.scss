@@ -2,8 +2,8 @@
 
 // Sass colours
 $hue-main: 180;
-$hue-hint: 20;
-$hue-link: 210;
+$hue-hint: 220;
+$hue-link: 20;
 
 $color-fore: hsl($hue-main, 90, 10);
 $color-fmin: hsl($hue-main, 10, 60);
@@ -44,17 +44,39 @@ $color-lhov: hsl($hue-link, 100, 30);
   --color-hint: hsl(var(--hue-hint), 100%, 60%);
   --color-hhov: hsl(var(--hue-hint), 100%, 70%);
 
+  --color-link: hsl(var(--hue-link), 100%, 70%);
   --color-lvis: hsl(var(--hue-link), 30%, 50%);
-  --color-lhov: hsl(var(--hue-link), 100%, 70%);
+  --color-lhov: hsl(var(--hue-link), 100%, 90%);
 
 }
 
-#page, nav ul {
+#page, header, nav ul {
   color: $color-fore;
   color: var(--color-fore);
   background-color: $color-back;
   background-color: var(--color-back);
   transition: color 0.3s linear, background-color 0.3s linear, transform 0.3s ease-in-out;
+}
+
+header {
+  background-color: $color-hint;
+  background-color: var(--color-hint);
+
+  p {
+    color: $color-back;
+    color: var(--color-back);
+  }
+
+  .box {
+    stroke-width: 6;
+    stroke: $color-fore;
+    stroke: var(--color-back);
+  }
+
+  .text {
+    fill: $color-back;
+    fill: var(--color-back);
+  }
 }
 
 nav {
@@ -135,7 +157,7 @@ a:hover, a:focus, a:active {
 
 :target {
 
-  animation: articleflash 0.2s linear 1s 1 forwards;
+  animation: articleflash 0.2s linear 0.6s 1 forwards;
 
   h1, h2 {
     color: $color-back;
@@ -148,8 +170,8 @@ a:hover, a:focus, a:active {
 
 @keyframes articleflash {
   0% {
-    background-color: $color-hint;
-    background-color: var(--color-hint);
+    background-color: $color-link;
+    background-color: var(--color-link);
   }
   100% {
     background-color: $color-back;
