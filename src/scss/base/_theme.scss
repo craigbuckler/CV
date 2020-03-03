@@ -59,13 +59,10 @@ $color-lhov: hsl($hue-link, 100, 30);
 }
 
 header {
+  color: $color-back;
+  color: var(--color-back);
   background-color: $color-hint;
   background-color: var(--color-hint);
-
-  p {
-    color: $color-back;
-    color: var(--color-back);
-  }
 
   .box {
     stroke-width: 6;
@@ -73,10 +70,11 @@ header {
     stroke: var(--color-back);
   }
 
-  .text {
+  .text, #show svg {
     fill: $color-back;
     fill: var(--color-back);
   }
+
 }
 
 nav {

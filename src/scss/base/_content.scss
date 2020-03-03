@@ -21,7 +21,8 @@ label[for="full"] {
   .off { display: inline-block; }
 }
 
-#full:checked ~ nav label[for="full"] {
+#full:checked ~ nav label[for="full"],
+#full:checked ~ #page header label[for="full"] {
   .on  { display: inline-block; }
   .off { display: none; }
 }
