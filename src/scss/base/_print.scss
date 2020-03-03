@@ -10,8 +10,8 @@
     font-size: 12px;
   }
 
-  nav, input {
-    display: none;
+  nav, input, #show {
+    display: none !important;
   }
 
   #full:not(:checked) ~ #page::after {

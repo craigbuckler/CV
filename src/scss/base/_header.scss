@@ -5,6 +5,7 @@ header {
   margin-bottom: 1em;
 
   .content {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,6 +22,28 @@ header {
     font-size: calc(1em + 1.5vw);
     line-height: 1;
     text-align: right;
+  }
+
+  #show {
+    display: none;
+    position: absolute;
+    font-size: 0.85em;
+    padding: 0.25em 3vw;
+    bottom: 0;
+    right: 0;
+    opacity: 0.7;
+
+    svg {
+      padding: 0;
+    }
+
+    @include respond('small') {
+      display: block;
+    }
+
+    &:hover, &:focus {
+      opacity: 1;
+    }
   }
 
 }
